@@ -1,0 +1,20 @@
+{
+  "name": "vue-split-pane",
+  "version": "0.0.1",
+  "description": "Adjustable split pane using Vue.js",
+  "main": "src/SplitPane.vue",
+  "peerDependencies": {
+    "vue": ">= 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "vue-split-pane"
+  },
+  "keywords": [
+    "vue",
+    "split-pane",
+    "vue-split-pane"
+  ],
+  "author": "Dang Van Thanh <dangvanthanh@dangthanh.org>",
+  "license": "MIT"
+}
