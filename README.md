@@ -24,7 +24,7 @@ $ npm install vue-split-pane --save
     <split-pane>
       <section slot="left">Left Pane</section>
       <section slot="right">Right Pane</section>
-    </split>
+    </split-pane>
   </div>
 </template>
 
