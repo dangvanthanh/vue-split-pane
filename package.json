@@ -1,6 +1,6 @@
 {
   "name": "vue-split-pane",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adjustable split pane using Vue.js",
   "main": "src/SplitPane.vue",
   "peerDependencies": {

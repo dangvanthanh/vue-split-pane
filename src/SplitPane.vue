@@ -55,12 +55,13 @@ export default {
 }
 
 .split-pane {
+  display: flex;
+  flex-direction: row;
   height: 100%;
 }
 
 .split-pane-item,
 .split-pane-gutter {
-  float: left;
   height: 100%;
 }
 
