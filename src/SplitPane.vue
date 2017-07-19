@@ -3,7 +3,7 @@
     <div class="split-pane-item" :style="{ width: splitLeft }">
       <slot name="left"></slot>
     </div>
-    <div class="split-pane-gutter" @mousedown="dragStart" :style="{ width: gutter + 'px' }"></div>
+    <div class="split-pane-gutter" @mousedown="dragStart"></div>
     <div class="split-pane-item" :style="{ width: splitRight }">
       <slot name="right"></slot>
     </div>
@@ -14,7 +14,7 @@
 export default {
   data () {
     return {
-      gutter: 5,
+      gutter: 11,
       split: 50,
       dragging: false
     }
@@ -66,11 +66,26 @@ export default {
 }
 
 .split-pane-gutter {
-  background: #eee;
-  cursor: ew-resize;
+  background: #000;
+  opacity: .2;
+  z-index: 1;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: 11px;
+  margin: 0 -5px;
+  border-left: 5px solid rgba(255, 255, 255, 0);
+  border-right: 5px solid rgba(255, 255, 255, 0);
+  cursor: col-resize;
+}
+
+.split-pane-gutter:hover,
+.split-pane-gutter:focus {
+  border-left: 5px solid rgba(0, 0, 0, 0.5);
+  border-right: 5px solid rgba(0, 0, 0, 0.5);
+  transition: all 2s ease;
 }
 
 .is-dragging {
-  cursor: ew-resize;
+  cursor: col-resize;
 }
 </style>
