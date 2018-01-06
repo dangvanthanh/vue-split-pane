@@ -11,7 +11,8 @@ import replace from 'rollup-plugin-replace'
 
 let plugins = [
   alias({
-    vue$: 'vue/dist/vue.common.js'
+    vue$: 'vue/dist/vue.common.js',
+    '@': './src/'
   }),
   vue({
     css: './dist/assets/css/app.css'
@@ -42,7 +43,7 @@ const isProduction = process.env.NODE_ENV === `production`
 const isDevelopment = process.env.NODE_ENV === `development`
 
 if (isProduction) {
-  config.sourcemap = false
+  config.output.sourcemap = false
   config.plugins.push(
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
