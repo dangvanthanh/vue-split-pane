@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import SplitPane from './components/SplitPane.vue'
+import SplitPane from '@/components/SplitPane.vue'
 
 export default {
   name: 'app',

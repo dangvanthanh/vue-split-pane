@@ -1,3 +1,4 @@
+import path from 'path'
 import alias from 'rollup-plugin-alias'
 import vue from 'rollup-plugin-vue'
 import buble from 'rollup-plugin-buble'
@@ -12,7 +13,8 @@ import replace from 'rollup-plugin-replace'
 let plugins = [
   alias({
     vue$: 'vue/dist/vue.common.js',
-    '@': './src/'
+    '@': path.resolve('./src/'),
+    resolve: ['.js', '.vue']
   }),
   vue({
     css: './dist/assets/css/app.css'
