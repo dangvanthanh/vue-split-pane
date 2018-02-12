@@ -16,6 +16,12 @@ $ npm install vue-split-pane --save
 
 ## Usage
 
+### CDN
+
+```
+<script src="https://unpkg.com/vue-split-pane"></script>
+```
+
 ### .vue files
 
 ```html
