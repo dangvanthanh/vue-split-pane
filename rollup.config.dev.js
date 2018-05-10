@@ -1,8 +1,8 @@
-import alias from 'rollup-plugin-alias'
-import vue from 'rollup-plugin-vue'
-import buble from 'rollup-plugin-buble'
-import nodeResolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
+import alias from 'rollup-plugin-alias';
+import vue from 'rollup-plugin-vue';
+import buble from 'rollup-plugin-buble';
+import nodeResolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
 export default {
   input: 'src/index.js',
@@ -10,7 +10,7 @@ export default {
     name: 'VueSplitPane',
     file: 'dist/vue-split-pane.js',
     format: 'umd',
-    sourcemap: true
+    sourcemap: false
   },
   plugins: [
     alias({
@@ -23,4 +23,4 @@ export default {
     nodeResolve({ browser: true, jsnext: true, main: true }),
     commonjs()
   ]
-}
+};
