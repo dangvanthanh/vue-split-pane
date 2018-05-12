@@ -10,8 +10,7 @@
     "build": "npm run build:prod && npm run build:dev && npm run build:esm",
     "build:prod": "rollup -c rollup.config.prod.js",
     "build:dev": "rollup -c rollup.config.dev.js",
-    "build:esm": "rollup -c rollup.config.esm.js",
-    "release": "np"
+    "build:esm": "rollup -c rollup.config.esm.js"
   },
   "peerDependencies": {
     "vue": ">= 2"
@@ -33,7 +32,7 @@
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.0.3",
     "rollup-plugin-uglify": "^3.0.0",
-    "rollup-plugin-vue": "^4.1.0",
+    "rollup-plugin-vue": "^4.1.3",
     "uglify-es": "^3.3.10",
     "vue-template-compiler": "^2.5.16"
   }
