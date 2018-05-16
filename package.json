@@ -1,16 +1,14 @@
 {
   "name": "vue-split-pane",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Adjustable split pane using Vue.js",
   "author": "Dang Van Thanh <dangvanthanh@dangthanh.org>",
-  "main": "dist/vue-split-pane.js",
-  "unpkg": "dist/vue-split-pane.min.js",
-  "module": "dist/vue-split-pane.esm.js",
+  "main": "dist/vue-split-pane.cjs.js",
+  "unpkg": "dist/vue-split-pane.js",
+  "module": "dist/vue-split-pane.es.js",
   "scripts": {
-    "build": "npm run build:prod && npm run build:dev && npm run build:esm",
-    "build:prod": "rollup -c rollup.config.prod.js",
-    "build:dev": "rollup -c rollup.config.dev.js",
-    "build:esm": "rollup -c rollup.config.esm.js"
+    "build": "bili src/index.js --format umd,cjs,es --exports named --module-name VueCkeditor",
+    "example": "poi example/index.js"
   },
   "peerDependencies": {
     "vue": ">= 2"
@@ -26,6 +24,8 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "bili": "^3.1.2",
+    "poi": "^10.1.7",
     "rollup": "^0.58.2",
     "rollup-plugin-alias": "^1.4.0",
     "rollup-plugin-buble": "^0.19.2",

@@ -41,6 +41,9 @@ export default {
   components: { SplitPane }
 }
 </script>
+
+<!-- optionally use our default style -->
+<style src="vue-split-pane/themes/default.css"></style>
 ```
 
 ## Slot
