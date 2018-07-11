@@ -1,11 +1,14 @@
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.SplitPane = {})));
-}(this, (function (exports) { 'use strict';
+(function(global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined'
+    ? factory(exports)
+    : typeof define === 'function' && define.amd
+      ? define(['exports'], factory)
+      : factory((global.VueSplitPane = {}));
+})(this, function(exports) {
+  'use strict';
 
   var index = {
-    name: 'split-pane',
+    name: 'vue-split-pane',
     data: function data() {
       return {
         gutter: 11,
@@ -15,39 +18,57 @@
     },
     computed: {
       splitLeft: function splitLeft() {
-        return "calc(".concat(this.split, "% - ").concat(this.gutter, "px)");
+        return 'calc('.concat(this.split, '% - ').concat(this.gutter, 'px)');
       },
       splitRight: function splitRight() {
-        return "calc(".concat(100 - this.split, "% - ").concat(this.gutter, "px)");
+        return 'calc('
+          .concat(100 - this.split, '% - ')
+          .concat(this.gutter, 'px)');
       }
     },
     render: function render(h) {
-      return h('div', {
-        class: {
-          'split-pane': true,
-          'is-dragging': this.dragging
+      return h(
+        'div',
+        {
+          class: {
+            'split-pane': true,
+            'is-dragging': this.dragging
+          },
+          on: {
+            mousemove: this.dragMove,
+            mouseup: this.dragEnd,
+            mouseleave: this.dragEnd
+          }
         },
-        on: {
-          mousemove: this.dragMove,
-          mouseup: this.dragEnd,
-          mouseleave: this.dragEnd
-        }
-      }, [h('div', {
-        class: 'split-pane-item',
-        style: {
-          width: this.splitLeft
-        }
-      }, this.$slots.left), h('div', {
-        class: 'split-pane-gutter',
-        on: {
-          mousedown: this.dragStart
-        }
-      }), h('div', {
-        class: 'split-pane-item',
-        style: {
-          width: this.splitRight
-        }
-      }, this.$slots.right)]);
+        [
+          h(
+            'div',
+            {
+              class: 'split-pane-item',
+              style: {
+                width: this.splitLeft
+              }
+            },
+            this.$slots.left
+          ),
+          h('div', {
+            class: 'split-pane-gutter',
+            on: {
+              mousedown: this.dragStart
+            }
+          }),
+          h(
+            'div',
+            {
+              class: 'split-pane-item',
+              style: {
+                width: this.splitRight
+              }
+            },
+            this.$slots.right
+          )
+        ]
+      );
     },
     methods: {
       dragStart: function dragStart(e) {
@@ -59,7 +80,7 @@
         if (this.dragging) {
           var dx = e.pageX - this.startX;
           var totalWidth = this.$el.offsetWidth;
-          this.split = this.startSplit + ~~(dx / totalWidth * 100);
+          this.split = this.startSplit + ~~((dx / totalWidth) * 100);
         }
       },
       dragEnd: function dragEnd() {
@@ -71,5 +92,4 @@
   exports.default = index;
 
   Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+});

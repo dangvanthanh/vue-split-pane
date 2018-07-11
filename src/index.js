@@ -1,5 +1,5 @@
 export default {
-  name: 'split-pane',
+  name: 'vue-split-pane',
   data() {
     return {
       gutter: 11,
@@ -63,7 +63,7 @@ export default {
       if (this.dragging) {
         const dx = e.pageX - this.startX;
         const totalWidth = this.$el.offsetWidth;
-        this.split = this.startSplit + ~~(dx / totalWidth * 100);
+        this.split = this.startSplit + ~~((dx / totalWidth) * 100);
       }
     },
     dragEnd() {
