@@ -1,6 +1,6 @@
 module.exports = {
   output: {
-    format: ['umd', 'cjs', 'es'],
+    format: ['iife', 'umd', 'cjs', 'es'],
     moduleName: 'VueSplitPane',
     minify: true,
     fileName: 'vue-split-pane.[format].js',

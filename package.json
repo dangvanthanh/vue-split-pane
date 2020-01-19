@@ -5,7 +5,7 @@
   "author": "Dang Van Thanh <dangvanthanh@dangthanh.org>",
   "main": "dist/vue-split-pane.cjs.js",
   "unpkg": "dist/vue-split-pane.js",
-  "module": "dist/vue-split-pane.es.js",
+  "module": "dist/vue-split-pane.esm.js",
   "scripts": {
     "build": "bili src/index.js --bundle-node-modules"
   },
