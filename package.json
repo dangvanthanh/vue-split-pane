@@ -7,7 +7,6 @@
   "unpkg": "dist/vue-split-pane.js",
   "module": "dist/vue-split-pane.es.js",
   "scripts": {
-    "precommit": "pretty-quick --staged",
     "build": "bili src/index.js --format umd,cjs,es --exports named --module-name VueSplitPane"
   },
   "peerDependencies": {
@@ -28,5 +27,10 @@
     "husky": "^4.0.10",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
