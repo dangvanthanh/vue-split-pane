@@ -1,5 +1,4 @@
-'use strict';
-var index = {
+export default {
   name: 'vue-split-pane',
   data: function() {
     return { gutter: 11, split: 50, dragging: !1 };
@@ -61,4 +60,3 @@ var index = {
     }
   }
 };
-module.exports = index;

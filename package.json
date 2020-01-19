@@ -7,7 +7,7 @@
   "unpkg": "dist/vue-split-pane.js",
   "module": "dist/vue-split-pane.es.js",
   "scripts": {
-    "build": "bili src/index.js --format umd,cjs,es --exports named --module-name VueSplitPane"
+    "build": "bili src/index.js --bundle-node-modules"
   },
   "peerDependencies": {
     "vue": ">= 2"
