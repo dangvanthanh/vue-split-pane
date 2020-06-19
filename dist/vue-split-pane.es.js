@@ -1,83 +1,62 @@
-var index = {
+export default {
   name: 'vue-split-pane',
-  data: function data() {
-    return {
-      gutter: 11,
-      split: 50,
-      dragging: false
-    };
+  data: function () {
+    return { gutter: 11, split: 50, dragging: !1 };
   },
   computed: {
-    splitLeft: function splitLeft() {
+    splitLeft: function () {
       return 'calc('.concat(this.split, '% - ').concat(this.gutter, 'px)');
     },
-    splitRight: function splitRight() {
+    splitRight: function () {
       return 'calc('
         .concat(100 - this.split, '% - ')
         .concat(this.gutter, 'px)');
-    }
+    },
   },
-  render: function render(h) {
-    return h(
+  render: function (t) {
+    return t(
       'div',
       {
-        class: {
-          'split-pane': true,
-          'is-dragging': this.dragging
-        },
+        class: { 'split-pane': !0, 'is-dragging': this.dragging },
         on: {
           mousemove: this.dragMove,
           mouseup: this.dragEnd,
-          mouseleave: this.dragEnd
-        }
+          mouseleave: this.dragEnd,
+        },
       },
       [
-        h(
+        t(
           'div',
-          {
-            class: 'split-pane-item',
-            style: {
-              width: this.splitLeft
-            }
-          },
+          { class: 'split-pane-item', style: { width: this.splitLeft } },
           this.$slots.left
         ),
-        h('div', {
+        t('div', {
           class: 'split-pane-gutter',
-          on: {
-            mousedown: this.dragStart
-          }
+          on: { mousedown: this.dragStart },
         }),
-        h(
+        t(
           'div',
-          {
-            class: 'split-pane-item',
-            style: {
-              width: this.splitRight
-            }
-          },
+          { class: 'split-pane-item', style: { width: this.splitRight } },
           this.$slots.right
-        )
+        ),
       ]
     );
   },
   methods: {
-    dragStart: function dragStart(e) {
-      this.dragging = true;
-      this.startX = e.pageX;
-      this.startSplit = this.split;
+    dragStart: function (t) {
+      (this.dragging = !0),
+        (this.startX = t.pageX),
+        (this.startSplit = this.split);
     },
-    dragMove: function dragMove(e) {
+    dragMove: function (t) {
       if (this.dragging) {
-        var dx = e.pageX - this.startX;
-        var totalWidth = this.$el.offsetWidth;
-        this.split = this.startSplit + ~~((dx / totalWidth) * 100);
+        var i = t.pageX - this.startX,
+          s = this.$el.offsetWidth;
+        this.split = this.startSplit + ~~((i / s) * 100);
       }
     },
-    dragEnd: function dragEnd() {
-      this.dragging = false;
-    }
-  }
+    dragEnd: function () {
+      this.dragging = !1;
+    },
+  },
 };
-
-export default index;
