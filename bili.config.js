@@ -4,6 +4,7 @@ module.exports = {
     moduleName: 'VueSplitPane',
     minify: true,
     fileName: 'vue-split-pane.[format].js',
-    sourceMap: false
-  }
+    sourceMap: false,
+    exports: 'auto',
+  },
 };
