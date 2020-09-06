@@ -1,4 +1,4 @@
-# vue-split-pane
+# Vue Split Pane
 
 > Adjustable split pane using Vue.js
 
@@ -18,40 +18,42 @@ $ npm install vue-split-pane --save
 
 ### CDN
 
-```
+```html
 <script src="https://unpkg.com/vue-split-pane"></script>
 ```
 
 ### .vue files
 
-```html
+```vue
 <template>
   <div class="app">
-    <split-pane>
+    <VueSplitPane>
       <section slot="left">Left Pane</section>
       <section slot="right">Right Pane</section>
-    </split-pane>
+    </VueSplitPane>
   </div>
 </template>
 
 <script>
-import SplitPane from 'vue-split-pane'
+import VueSplitPane from 'vue-split-pane';
 
 export default {
-  components: { SplitPane }
-}
+  components: { VueSplitPane },
+};
 </script>
 
 <!-- optionally use our default style -->
-<style src="vue-split-pane/themes/default.css"></style>
+<style>
+@import 'vue-split-pane/dist/vue-split-pane.esm.css';
+</style>
 ```
 
 ## Slot
 
-| Name           | Description                              |
-| -------------- | ---------------------------------------- |
-| `left`         | The content of left pane                 |
-| `right`        | The content of right pane                |
+| Name    | Description               |
+| ------- | ------------------------- |
+| `left`  | The content of left pane  |
+| `right` | The content of right pane |
 
 ## Build Setup
 

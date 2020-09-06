@@ -1,13 +1,18 @@
 {
   "name": "vue-split-pane",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Adjustable split pane using Vue.js",
   "author": "Dang Van Thanh <dangvanthanh@dangthanh.org>",
-  "main": "dist/vue-split-pane.cjs.js",
-  "unpkg": "dist/vue-split-pane.js",
+  "main": "dist/vue-split-pane.umd.js",
   "module": "dist/vue-split-pane.esm.js",
+  "unpkg": "dist/vue-split-pane.min.js",
+  "style": "vue-split-pane/dist/vue-split-pane.esm.css",
   "scripts": {
-    "build": "bili src/index.js --bundle-node-modules"
+    "build": "npm run build:browsers && npm run build:es && npm run build:umd",
+    "build:browsers": "rollup -c build/rollup.config.browsers.js",
+    "build:es": "rollup -c build/rollup.config.es.js",
+    "build:umd": "rollup -c build/rollup.config.umd.js",
+    "test": "jest"
   },
   "peerDependencies": {
     "vue": ">= 2"
@@ -23,15 +28,22 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "bili": "^5.0.5",
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1",
-    "serialize-javascript": "^4.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "@babel/preset-env": "^7.11.5",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@testing-library/dom": "^7.24.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/vue": "^5.0.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.3.0",
+    "clean-css": "^4.2.3",
+    "esbuild": "^0.6.30",
+    "jest": "^26.4.2",
+    "rollup": "^2.26.10",
+    "rollup-plugin-css-only": "^2.1.0",
+    "rollup-plugin-esbuild": "^2.5.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue-jest": "^3.0.6",
+    "vue-template-compiler": "^2.6.12"
   }
 }
