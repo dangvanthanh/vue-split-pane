@@ -31,19 +31,19 @@
     "@babel/preset-env": "^7.11.5",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
-    "@testing-library/dom": "^7.24.1",
+    "@testing-library/dom": "^7.24.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/vue": "^5.0.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^26.3.0",
     "clean-css": "^4.2.3",
-    "esbuild": "^0.6.30",
+    "esbuild": "^0.7.1",
     "jest": "^26.4.2",
-    "rollup": "^2.26.10",
+    "rollup": "^2.26.11",
     "rollup-plugin-css-only": "^2.1.0",
     "rollup-plugin-esbuild": "^2.5.0",
     "rollup-plugin-vue": "^5.1.9",
-    "vue-jest": "^3.0.6",
+    "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.12"
   }
 }
