@@ -150,16 +150,16 @@ var __vue_render__ = function() {
       _vm._ssrNode(
         '<div class="split-pane-item"' +
           _vm._ssrStyle(null, { width: _vm.splitLeft }, null) +
-          " data-v-1d65af2a>",
+          " data-v-ad563e4e>",
         "</div>",
         [_vm._t("left")],
         2
       ),
-      _vm._ssrNode(' <div class="split-pane-gutter" data-v-1d65af2a></div> '),
+      _vm._ssrNode(' <div class="split-pane-gutter" data-v-ad563e4e></div> '),
       _vm._ssrNode(
         '<div class="split-pane-item"' +
           _vm._ssrStyle(null, { width: _vm.splitRight }, null) +
-          " data-v-1d65af2a>",
+          " data-v-ad563e4e>",
         "</div>",
         [_vm._t("right")],
         2
@@ -174,9 +174,9 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = undefined;
   /* scoped */
-  const __vue_scope_id__ = "data-v-1d65af2a";
+  const __vue_scope_id__ = "data-v-ad563e4e";
   /* module identifier */
-  const __vue_module_identifier__ = "data-v-1d65af2a";
+  const __vue_module_identifier__ = "data-v-ad563e4e";
   /* functional template */
   const __vue_is_functional_template__ = false;
   /* style inject */
@@ -223,5 +223,4 @@ if (GlobalVue) {
   GlobalVue.use(plugin);
 }
 
-export default plugin;
-export { install };
+export { plugin as default, install };
