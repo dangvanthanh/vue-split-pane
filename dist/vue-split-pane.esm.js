@@ -150,16 +150,16 @@ var __vue_render__ = function() {
       _vm._ssrNode(
         '<div class="split-pane-item"' +
           _vm._ssrStyle(null, { width: _vm.splitLeft }, null) +
-          " data-v-ad563e4e>",
+          " data-v-3a799002>",
         "</div>",
         [_vm._t("left")],
         2
       ),
-      _vm._ssrNode(' <div class="split-pane-gutter" data-v-ad563e4e></div> '),
+      _vm._ssrNode(' <div class="split-pane-gutter" data-v-3a799002></div> '),
       _vm._ssrNode(
         '<div class="split-pane-item"' +
           _vm._ssrStyle(null, { width: _vm.splitRight }, null) +
-          " data-v-ad563e4e>",
+          " data-v-3a799002>",
         "</div>",
         [_vm._t("right")],
         2
@@ -174,9 +174,9 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = undefined;
   /* scoped */
-  const __vue_scope_id__ = "data-v-ad563e4e";
+  const __vue_scope_id__ = "data-v-3a799002";
   /* module identifier */
-  const __vue_module_identifier__ = "data-v-ad563e4e";
+  const __vue_module_identifier__ = "data-v-3a799002";
   /* functional template */
   const __vue_is_functional_template__ = false;
   /* style inject */
