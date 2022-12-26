@@ -1,4 +1,5 @@
 import { writeFileSync } from 'fs';
+import terser from '@rollup/plugin-terser';
 import vue from 'rollup-plugin-vue';
 import css from 'rollup-plugin-css-only';
 import CleanCSS from 'clean-css';
@@ -24,5 +25,6 @@ config.plugins.push(
     },
   })
 );
+config.plugins.push(terser())
 
 export default config;
